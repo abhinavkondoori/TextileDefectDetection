@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Textile Defect Detection Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Textile Defect Detection</p>
+        <h1>Example Fabric Results</h1>
+        <p class="subtitle">
+          Quickly inspect the example outputs produced by the yarn tracking and FCN
+          pipeline.
+        </p>
+      </div>
+      <div class="hero-actions">
+        <label class="toggle">
+          <input id="overlayToggle" type="checkbox" checked />
+          <span>Show defect overlays</span>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Input Fabric</h2>
+        <p class="description">Front and back captures of the sample fabric.</p>
+        <div class="grid two">
+          <figure>
+            <img src="../example/orig_fabric/fl01.png" alt="Front fabric sample" />
+            <figcaption>Front (fl01)</figcaption>
+          </figure>
+          <figure>
+            <img src="../example/orig_fabric/bl01.png" alt="Back fabric sample" />
+            <figcaption>Back (bl01)</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Detected Defects</h2>
+        <p class="description">
+          Defect heatmaps from warp and weft inspections. Toggle overlays to compare
+          with the raw input.
+        </p>
+        <div class="grid two">
+          <figure class="overlay">
+            <img
+              class="base"
+              src="../example/orig_fabric/fl01.png"
+              alt="Base fabric for warp defects"
+            />
+            <img
+              class="overlay-image"
+              src="../example/defects_detected/01___warp.png"
+              alt="Warp defects overlay"
+            />
+            <figcaption>Warp defects</figcaption>
+          </figure>
+          <figure class="overlay">
+            <img
+              class="base"
+              src="../example/orig_fabric/fl01.png"
+              alt="Base fabric for weft defects"
+            />
+            <img
+              class="overlay-image"
+              src="../example/defects_detected/01___weft.png"
+              alt="Weft defects overlay"
+            />
+            <figcaption>Weft defects</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        To update these images, run the detection pipeline and refresh this page.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

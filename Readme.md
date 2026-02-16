@@ -38,3 +38,13 @@ as well as the training step was deactivated in this code example. Depending on 
 be included.
 
 If you have a problem running this code please open an issue.
+
+## Frontend viewer
+
+The `frontend/` folder contains a static HTML viewer for the example outputs. To launch it locally:
+
+```bash
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000/frontend/` in your browser. The viewer references the sample images in `example/` so you can quickly inspect inputs and detected defects.

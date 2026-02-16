@@ -2,9 +2,11 @@ import cv2
 import time
 import glob
 import os
+import pickle
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import tensorflow as tf
+import numpy as np
 
 from morphologie import morphologie
 from detect_yarns import detectYarns
